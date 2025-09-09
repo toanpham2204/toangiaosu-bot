@@ -1,8 +1,10 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 import re
+import os
 
-TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"  # 🔑 Thay token của bạn
+TOKEN = os.getenv("TOKEN")  # lấy từ biến môi trường khi deploy
+
 
 # Ý nghĩa Năm cá nhân
 Y_NGHIA = {
